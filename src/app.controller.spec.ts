@@ -9,7 +9,7 @@ const handler = (service: typeof appService = appService) =>
   toFetchHandler(
     new Rhythm<RhythmHttpContext>({ name: "test" })
       .provide(() => ({ appService: service }))
-      .use(appController.routes()),
+      .use(appController.middleware()),
   );
 
 describe("AppController", () => {

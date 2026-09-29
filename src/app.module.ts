@@ -5,7 +5,7 @@ import { appService } from "./app.service";
 
 export const appModule = new Rhythm<RhythmHttpContext>({ name: "app", type: "module" })
   .provide(() => ({ appService }))
-  .use(appController.routes())
+  .use(appController.middleware())
   .use((ctx) => {
     ctx.response.status = 404;
     ctx.response.headers.set("content-type", "application/json");
