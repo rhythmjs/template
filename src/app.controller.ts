@@ -6,7 +6,7 @@ export type AppContext = RhythmHttpContext & {
   appService: typeof appService;
 };
 
-export const appController = new RhythmRouter<AppContext>({ name: "app" }).get("/", (ctx) => {
+export const appController = new RhythmRouter<AppContext>().get("/", (ctx) => {
   ctx.response.headers.set("content-type", "text/plain");
   ctx.response.body = ctx.appService.getHello();
 });
