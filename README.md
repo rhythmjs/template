@@ -1,7 +1,7 @@
 # template
 
-A Nest-style starter template for [Rhythm](https://github.com/rhythmjs/rhythm): a module, a controller, and
-a service, wired together on the onion middleware kernel.
+The starter template for [Rhythm](https://github.com/rhythmjs/rhythm), the Bun-native backend
+framework: a module, a controller, and a service, wired together on the onion middleware kernel.
 
 ## Structure
 
