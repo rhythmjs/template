@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@rhythmjs/rhythm':
-        specifier: ^0.0.4
-        version: 0.0.4
+        specifier: ^0.0.9
+        version: 0.0.9
       '@rhythmjs/router':
-        specifier: ^0.0.4
-        version: 0.0.4
+        specifier: ^0.0.9
+        version: 0.0.9
     devDependencies:
       '@types/node':
         specifier: ^26.6.3
@@ -499,12 +499,12 @@ packages:
   '@polka/url@1.0.0-next.29':
     resolution: {integrity: sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==}
 
-  '@rhythmjs/rhythm@0.0.4':
-    resolution: {integrity: sha512-wPtCXOomFy4hjrXbCF5MJQbGj1+Ad9lmwTXddTd4PKw9vAUNj+0DrM2+AOEayhzlgQHRtXkZ5eBMyJZaI/RRnQ==}
+  '@rhythmjs/rhythm@0.0.9':
+    resolution: {integrity: sha512-cWAUIIfdj6rPekHvKF91G1OQVUv4jnW69FdVdwZlzSUDuf7ac5ZZUfJTeAg1k81mikMYCEclg+MXxmUEADyJMg==}
     engines: {node: '>=20.19.0'}
 
-  '@rhythmjs/router@0.0.4':
-    resolution: {integrity: sha512-KZPTEma1u7ItMCcblFO7P9a3tE2BoonAeC/hy0WQH0MqUaEcOoZSFTnm9zV9mIDqi055r5mwhWKyyyDiGPhuOA==}
+  '@rhythmjs/router@0.0.9':
+    resolution: {integrity: sha512-Ag0vs0HTeEHfH635Fh9WwrLfzY5/HFNyXRsa+lV7ODXfJuw5YNePVPO/ccMCTxTxKYkBIajQsGB6EQ/wg2luvQ==}
     engines: {node: '>=20.19.0'}
 
   '@testing-library/dom@10.4.2':
@@ -1165,6 +1165,11 @@ packages:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
 
+  srvx@1.0.5:
+    resolution: {integrity: sha512-KvSKRpgPG/oaq3cyT614OQ2bAa7DynuGamivCZeoZzIUULOdbQz6wUtnnVuC4+DCx2Zglzo8v5gBYmWIWYhDxA==}
+    engines: {node: '>=20.16.0'}
+    hasBin: true
+
   stackback@0.0.2:
     resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
 
@@ -1529,11 +1534,12 @@ snapshots:
 
   '@polka/url@1.0.0-next.29': {}
 
-  '@rhythmjs/rhythm@0.0.4': {}
+  '@rhythmjs/rhythm@0.0.9': {}
 
-  '@rhythmjs/router@0.0.4':
+  '@rhythmjs/router@0.0.9':
     dependencies:
-      '@rhythmjs/rhythm': 0.0.4
+      '@rhythmjs/rhythm': 0.0.9
+      srvx: 1.0.5
 
   '@testing-library/dom@10.4.2':
     dependencies:
@@ -2034,6 +2040,8 @@ snapshots:
       totalist: 3.0.1
 
   source-map-js@1.2.1: {}
+
+  srvx@1.0.5: {}
 
   stackback@0.0.2: {}
 

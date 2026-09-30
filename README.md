@@ -17,8 +17,9 @@ src/
   on the request context of everything mounted after it.
 - The **controller** is a `RhythmRouter` typed as `RhythmRouter<AppContext>`, so `ctx.appService` is fully
   typed inside every handler. The module mounts it with `.use(appController.routes())`.
-- **main.ts** turns the module into a Node request listener with `toNodeHandler` from
-  `@rhythmjs/router/adapters/node`. Swap in the Bun or Deno adapter to run elsewhere.
+- **main.ts** turns the module into a Node request listener with `getRequestListener` from
+  `@rhythmjs/router/adapters/node`. Swap in another adapter under `@rhythmjs/router/adapters/*`
+  (or `serve` from `@rhythmjs/router/serve`) to run elsewhere.
 
 ## Getting started
 
