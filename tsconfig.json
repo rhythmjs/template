@@ -5,12 +5,12 @@
     "moduleResolution": "bundler",
     "moduleDetection": "force",
     "lib": ["ESNext"],
-    "types": ["node"],
+    "types": ["bun"],
     "strict": true,
     "skipLibCheck": true,
     "noEmit": true,
     "verbatimModuleSyntax": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src", "vite.config.ts"]
+  "include": ["src"]
 }

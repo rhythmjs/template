@@ -7,7 +7,7 @@ a service, wired together on the onion middleware kernel.
 
 ```
 src/
-  main.ts             bootstraps the Node HTTP server
+  main.ts             bootstraps the Bun server
   app.module.ts       Rhythm instance: provides the service, mounts the controller, handles 404s
   app.controller.ts   RhythmRouter instance: routes and handlers
   app.service.ts      plain class holding the business logic
@@ -17,15 +17,13 @@ src/
   on the request context of everything mounted after it.
 - The **controller** is a `RhythmRouter` typed as `RhythmRouter<AppContext>`, so `ctx.appService` is fully
   typed inside every handler. The module mounts it with `.use(appController.routes())`.
-- **main.ts** turns the module into a Node request listener with `getRequestListener` from
-  `@rhythmjs/router/adapters/node`. Swap in another adapter under `@rhythmjs/router/adapters/*`
-  (or `serve` from `@rhythmjs/router/serve`) to run elsewhere.
+- **main.ts** serves the module on `Bun.serve` with `serve` from `@rhythmjs/router/serve`.
 
 ## Getting started
 
 ```sh
-pnpm install
-pnpm dev        # tsx watch src/main.ts
+bun install
+bun run dev     # bun --watch src/main.ts
 ```
 
 Then:
@@ -38,11 +36,11 @@ curl http://localhost:3000/missing  # {"success":false,"status":404,"message":"N
 ## Scripts
 
 ```sh
-pnpm dev        # run with reload on change
-pnpm start      # run once
-pnpm test       # vp test (vitest)
-pnpm typecheck  # tsc --noEmit
-pnpm check      # vp fmt --check + vp lint
+bun run dev        # run with reload on change
+bun run start      # run once
+bun test           # bun test runner
+bun run typecheck  # tsc --noEmit
+bun run check      # prettier --check + oxlint + tsc
 ```
 
 ## Growing the app
