@@ -5,8 +5,8 @@
     "": {
       "name": "rhythm-template",
       "dependencies": {
-        "@rhythmjs/rhythm": "^0.0.11",
-        "@rhythmjs/router": "^0.0.11",
+        "@rhythmjs/rhythm": "^0.0.14",
+        "@rhythmjs/router": "^0.0.13",
       },
       "devDependencies": {
         "@rhythmjs/testing": "^0.0.2",
@@ -56,9 +56,9 @@
 
     "@oxlint/binding-win32-x64-msvc": ["@oxlint/binding-win32-x64-msvc@1.86.0", "", { "os": "win32", "cpu": "x64" }, "sha512-az4dzifCRzES1crwu6pDFXzJTIanrdxXFL9TbiJWrx9LKcuacbR83aPvxDA1LKLNswi/RoqitC7Afcflhu3zBQ=="],
 
-    "@rhythmjs/rhythm": ["@rhythmjs/rhythm@0.0.11", "", {}, "sha512-+e3eQSsh/3wRGiF9sqtO6rkSa75eH8aDumgfwr2mAWdxy7s/14ns8Fx9uIT8AzXWKYTUsqBY2ITkw4YS3sENDg=="],
+    "@rhythmjs/rhythm": ["@rhythmjs/rhythm@0.0.14", "", {}, "sha512-MFpBWkxW8xPxTL2F0sFLgvtB9FLurTIL7vRZWu/Vj+/23MC+Q85gNdoahn+2Rvi7s0XceCrv3wrZDJqbR1uQVA=="],
 
-    "@rhythmjs/router": ["@rhythmjs/router@0.0.11", "", { "dependencies": { "@rhythmjs/rhythm": "0.0.11", "rou3": "^0.11.0" } }, "sha512-FyOgZJOBbOTWs4+b7xasz7Jfe3GqurzQ3diV2qjOv4phV8t68TwrkufJgVje75fcYUzVv3/AxhXikqF6w23JdA=="],
+    "@rhythmjs/router": ["@rhythmjs/router@0.0.13", "", { "dependencies": { "@rhythmjs/rhythm": "0.0.14", "rou3": "^0.11.0" } }, "sha512-vZIZIvk08tgPHTsEjMKrmG124AbgbMjVstQHkHUmwk0kVWBiAp/kRvcLY5NgO8RVrq2ah/RAgWFfWIdj3eHByQ=="],
 
     "@rhythmjs/testing": ["@rhythmjs/testing@0.0.2", "", { "peerDependencies": { "@rhythmjs/cli": "^0.0.11", "@rhythmjs/rhythm": "^0.0.11", "@rhythmjs/router": "^0.0.11", "@rhythmjs/ws": "^0.0.3" }, "optionalPeers": ["@rhythmjs/cli", "@rhythmjs/router", "@rhythmjs/ws"] }, "sha512-BAcw8PXeQcqTbr7qj1BmC7jhatCH/v7KFpu7k6/P6CKVadouVy4SagCGYLfScOKWJvt2jgnAwzJtFWRQx+EbXQ=="],
 
