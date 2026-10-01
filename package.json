@@ -10,9 +10,10 @@
     "start": "bun src/main.ts",
     "typecheck": "tsc --noEmit",
     "test": "bun test",
-    "lint": "oxlint src",
-    "fmt": "prettier --write \"src/**/*.ts\" \"*.json\"",
-    "fmt:check": "prettier --check \"src/**/*.ts\" \"*.json\"",
+    "test:e2e": "bun test ./test/*.e2e-spec.ts",
+    "lint": "oxlint src test",
+    "fmt": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\" \"*.json\"",
+    "fmt:check": "prettier --check \"src/**/*.ts\" \"test/**/*.ts\" \"*.json\"",
     "check": "bun run fmt:check && bun run lint && bun run typecheck"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
     "@rhythmjs/router": "^0.0.11"
   },
   "devDependencies": {
+    "@rhythmjs/testing": "^0.0.2",
     "@types/bun": "^1.2.0",
     "oxlint": "^1.0.0",
     "prettier": "^3.5.0",
