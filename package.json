@@ -17,11 +17,11 @@
     "check": "bun run fmt:check && bun run lint && bun run typecheck"
   },
   "dependencies": {
-    "@rhythmjs/rhythm": "^0.0.15",
-    "@rhythmjs/router": "^0.0.14"
+    "@rhythmjs/rhythm": "^0.0.16",
+    "@rhythmjs/router": "^0.0.16"
   },
   "devDependencies": {
-    "@rhythmjs/testing": "^0.0.2",
+    "@rhythmjs/testing": "^0.0.3",
     "@types/bun": "^1.2.0",
     "oxlint": "^1.0.0",
     "prettier": "^3.5.0",
