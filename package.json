@@ -1,6 +1,6 @@
 {
   "name": "rhythm-template",
-  "version": "0.0.2",
+  "version": "0.0.16",
   "private": true,
   "description": "Nest-style starter kit for Rhythm on Bun: module, controller, and service wired on the onion kernel.",
   "license": "ISC",
