@@ -8,15 +8,15 @@ framework: a module, a controller, and a service, wired together on the onion mi
 ```
 src/
   main.ts bootstraps the Bun server
-  app.module.ts Rhythm instance: holds the service on its context, mounts the controller, handles 404s
+  app.module.ts Rhythm instance: registers the service on its context, mounts the controller
   app.controller.ts RhythmRouter instance: routes and handlers
   app.service.ts plain class holding the business logic
 ```
 
-- The **service** is a plain class. The **module** assigns it to `appModule.context.appService`, which makes it available
+- The **service** is a plain class. The **module** registers it with `decorate(() => ({ appService }))`, which makes it available
   on the request context of everything mounted on it.
 - The **controller** is a `RhythmRouter` typed as `RhythmRouter<AppContext>`, so `ctx.appService` is fully
-  typed inside every handler. The module mounts it with `.use(appController.routes())`.
+  typed inside every handler. The module mounts it with `.use(mount(appController))`.
 - **main.ts** serves the module with a plain `Bun.serve` call; `toFetchHandler(appModule)` from `@rhythmjs/router/fetch` is its `fetch`.
 
 ## Getting started
@@ -30,7 +30,7 @@ Then:
 
 ```sh
 curl http://localhost:3000/ # Hello World!
-curl http://localhost:3000/missing # {"success":false,"status":404,"message":"Not Found"}
+curl http://localhost:3000/missing # Not Found
 ```
 
 ## Scripts
@@ -46,8 +46,8 @@ bun run check # prettier --check + oxlint + tsc
 ## Growing the app
 
 Add a feature by repeating the pattern: a `users.service.ts` class, a `users.controller.ts` router (give it
-a `prefix`), assign the service on the module's `context` in `app.module.ts`, and mount the controller with `.use(...routes())`
-before the 404 handler. Validation, sessions, logging, CORS, and friends are available as
+a `prefix`), register the service with `decorate` in `app.module.ts`, and mount the controller with `.use(mount(...))`
+before the default 404. Validation, sessions, logging, CORS, and friends are available as
 [`@rhythmjs/middleware`](https://github.com/rhythmjs/middleware), [`@rhythmjs/http`](https://github.com/rhythmjs/http),
 [`@rhythmjs/observability`](https://github.com/rhythmjs/observability), and
 [`@rhythmjs/security`](https://github.com/rhythmjs/security).

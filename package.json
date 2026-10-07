@@ -1,6 +1,6 @@
 {
   "name": "rhythm-template",
-  "version": "0.0.16",
+  "version": "0.0.18",
   "private": true,
   "description": "Nest-style starter kit for Rhythm on Bun: module, controller, and service wired on the onion kernel.",
   "license": "ISC",
@@ -17,8 +17,8 @@
     "check": "bun run fmt:check && bun run lint && bun run typecheck"
   },
   "dependencies": {
-    "@rhythmjs/rhythm": "^0.0.16",
-    "@rhythmjs/router": "^0.0.16"
+    "@rhythmjs/rhythm": "^0.0.18",
+    "@rhythmjs/router": "^0.0.18"
   },
   "devDependencies": {
     "@rhythmjs/testing": "^0.0.3",
